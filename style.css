@@ -98,6 +98,7 @@ ul { list-style: none; }
    ============================================= */
 .hero {
   position: relative;
+  z-index: 1;
   background: var(--black-bg);
   min-height: 100vh;
   display: flex;
@@ -630,7 +631,10 @@ button.footer-link:hover { color: var(--gold); border-color: var(--gold); }
   .hero-inner { flex-direction: column; text-align: center; margin-top: 40px; }
   .hero-content { margin: 0 auto; }
   .hero-btns { justify-content: center; }
-  .hero-visual { margin: 0 auto; width: min(100%, 420px); max-height: 56vw; }
+  
+  /* ИСПРАВЛЕННОЕ ВИДЕО: убрали сплющивание, вернули портретный формат */
+  .hero-visual { margin: 0 auto; width: min(100%, 380px); max-height: none; aspect-ratio: 3/4; }
+  
   .hero-bg-line { display: none; }
   
   .about-grid, .forwhom-grid, .steps, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
